@@ -71,9 +71,9 @@ components:
     generic_error_model:
       type: object
       required:
-        - error_message
+        - error
       properties: 
-        error_message: 
+        error: 
           type: string
     user_input:
       type: object

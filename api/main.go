@@ -31,6 +31,6 @@ func main() {
 	svc := service.NewService(rp)
 	h := handler.NewServerHandler(cfg, svc)
 
-	serv := server.NewServer(h)
+	serv := server.NewServer(h, cfg)
 	serv.Run(fmt.Sprintf("%v:%v", cfg.Host, cfg.Port))
 }

@@ -17,7 +17,7 @@ type CreateUserPayload struct {
 
 // GenericErrorModel defines model for generic_error_model.
 type GenericErrorModel struct {
-	ErrorMessage string `json:"error_message"`
+	Error string `json:"error"`
 }
 
 // GetUsersPayload defines model for get_users_payload.

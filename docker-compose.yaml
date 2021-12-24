@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  web:
+    image: web-app
+    build:
+      context: .
+      dockerfile: ./web/dockerfile
+    ports:
+      - 3000:80
+    environment:
+      NODE_ENV: development
+      NODE_PATH: src
+      REACT_APP_API_URL: http://127.0.0.1:8080
+  api:
+    image: api-app
+    build:
+      context: .
+      dockerfile: ./api/dockerfile
+    ports:
+      - 8080:8080
+    environment:
+        PORT: 8080
+        FRONT_URL_ORIGIN: http://localhost:3000
+

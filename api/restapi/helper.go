@@ -10,7 +10,7 @@ import (
 func NewGenericErrorModel(err error, msgf string, args ...interface{}) GenericErrorModel {
 	log.Error().Err(err).Msgf(msgf, args...)
 	return GenericErrorModel{
-		ErrorMessage: err.Error(),
+		Error: err.Error(),
 	}
 }
 
